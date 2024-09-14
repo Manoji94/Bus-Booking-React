@@ -11,7 +11,7 @@ const Cancellation = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://mjkr421.pythonanywhere.com/api/getseats/');
+      const response = await axios.get('https://mjkr421.pythonanywhere.com/api/getseats/');
       setBookedSeats(response.data.seats);
       setDataFetched(true);
     } catch (error) {
@@ -40,7 +40,7 @@ const Cancellation = () => {
     if (confirmCancellation) {
       try {
         // Make a DELETE request to the API endpoint for deleting a seat
-        await axios.delete(`http://mjkr421.pythonanywhere.com/api/deleteseat/${ticketNumber}/`);
+        await axios.delete(`https://mjkr421.pythonanywhere.com/api/deleteseat/${ticketNumber}/`);
         // Refetch data after cancellation
         fetchData();
         // Show cancellation message

@@ -26,7 +26,7 @@ const BusSeats = ({ slNo, date, departureTimings, selectedDepartureTime, fromLoc
       try {
         if (slNo && date && selectedDepartureTime) {
           const response = await axios.get(
-            `http://mjkr421.pythonanywhere.com/api/getseats/?sl_no=${slNo}&date=${date}&departure_timings=${selectedDepartureTime}`
+            `https://mjkr421.pythonanywhere.com/api/getseats/?sl_no=${slNo}&date=${date}&departure_timings=${selectedDepartureTime}`
           );
           const { seats } = response.data;
 

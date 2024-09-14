@@ -58,7 +58,7 @@ const Passengers = ({ slNo, fromLocation, toLocation, date, time, selectedSeats,
 
         console.log(`Submitting form for seat ${selectedSeats.split(',').map((seat) => seat.trim())[index]} with ticket number ${ticketNumber}`);
 
-        return axios.post('http://mjkr421.pythonanywhere.com/api/reserveseats/', {
+        return axios.post('https://mjkr421.pythonanywhere.com/api/reserveseats/', {
           sl_no: slNo,
           date: date,
           departure_timings: time,

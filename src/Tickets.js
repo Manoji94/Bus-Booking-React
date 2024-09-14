@@ -10,7 +10,7 @@ const Tickets = ({ ticketNumbers }) => {
     const fetchPassengerDetails = async () => {
       try {
         // Fetch all records for now
-        const response = await axios.get('http://mjkr421.pythonanywhere.com/api/getseats/');
+        const response = await axios.get('https://mjkr421.pythonanywhere.com/api/getseats/');
         const allPassengerDetails = response.data.seats;
 
         // Filter records based on provided ticketNumbers
