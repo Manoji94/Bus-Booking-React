@@ -8,7 +8,7 @@
 
 .seat-card {
   display: inline-block;
-  width: 70px;
+  width: 80px;
   height: 40px;
   border: 1px solid #ccc;
   margin: 4px;
@@ -31,4 +31,29 @@
   text-align: center;
 }
 
-/* Add additional styling as needed */
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .seat-card {
+    width: 60px; /* Adjusted width for medium screens */
+    height: 35px; /* Adjusted height for medium screens */
+    font-size: 12px; /* Adjusted font size for medium screens */
+  }
+  
+  .seat-container {
+    gap: 6px; /* Adjust gap for medium screens */
+    padding: 5px; /* Adjust padding for medium screens */
+  }
+}
+
+@media (max-width: 375px) {
+  .seat-card {
+    width: 40px; /* Further reduced width for small screens */
+    height: 30px; /* Further reduced height for small screens */
+    font-size: 10px; /* Further reduced font size for small screens */
+  }
+  
+  .seat-container {
+    gap: 4px; /* Further reduced gap for small screens */
+    padding: 5px; /* Ensure padding is appropriate */
+  }
+}
